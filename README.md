@@ -5,6 +5,7 @@ Communicate with [BitMe REST API](https://test.bitme.com/docs/rest).
 ## Verify API Credentials
 
 ```php
+<?php
 require 'rest.php';
 use BitMe\Rest;
 
@@ -20,6 +21,7 @@ if (Rest::isError($response)) {
 ## Orderbook
 
 ```php
+<?php
 // orderbook does not require authentication
 $rest = new Rest();
 $response = $rest->orderbook('BTCUSD');
@@ -36,5 +38,6 @@ You may use the [testnet](https://test.bitme.com) API for development/testing
 purposes.
 
 ```php
+<?php
 $rest = new Rest('testnetkey', 'testnetsecret', true);
 ```
