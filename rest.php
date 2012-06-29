@@ -143,12 +143,10 @@ class Rest
     
     // set URL/data for request depending on whether it's a GET or POST
     $url = $this->_baseUri . $call;
-    if ($method == 'get') {
-      if ($dataString) {
-        $url .= '?' . $dataString;
-      }
-    } else {
+    if ($method == 'post') {
       $options[CURLOPT_POSTFIELDS] = $dataString;
+    } elseif ($dataString) {
+      $url .= '?' . $dataString;
     }
     $options[CURLOPT_URL] = $url;
     
