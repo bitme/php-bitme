@@ -39,10 +39,14 @@ class Rest
     return $this->_doRequest('get', 'compat/orderbook/' . $currencyPair);
   }
   
-  public function compatTrades($currencyPair) 
+  public function compatTrades($currencyPair, $since = null) 
   {
     $currencyPair = urlencode($currencyPair);
-    return $this->_doRequest('get', 'compat/trades/' . $currencyPair);
+    $data = array();
+    if ($since !== null) {
+      $data['since'] = $since;
+    }
+    return $this->_doRequest('get', 'compat/trades/' . $currencyPair, $data);
   }
   
   /*
