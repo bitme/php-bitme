@@ -65,6 +65,12 @@ class Rest
     return $this->_doRequest('get', 'accounts', $data);
   }
   
+  public function bitcoinAddress()
+  {
+    $data = array('nonce' => $this->_nonce++);
+    return $this->_doRequest('get', 'bitcoin-address', $data);
+  }
+  
   public function ordersOpen()
   {
     $data = array('nonce' => $this->_nonce++);
