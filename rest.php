@@ -65,6 +65,12 @@ class Rest
     return $this->_doRequest('get', 'accounts', $data);
   }
   
+  public function accountLimits()
+  {
+    $data = array('nonce' => $this->_nonce++);
+    return $this->_doRequest('get', 'account-limits', $data);
+  }
+  
   public function bitcoinAddress()
   {
     $data = array('nonce' => $this->_nonce++);
