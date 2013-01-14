@@ -13,13 +13,11 @@ class Rest
     return is_object($response) && isset($response->http_code);
   }
   
-  public function __construct($key = null, $secret = null, $testnet = false)
+  public function __construct($key = null, $secret = null)
   {
     if ($key) $this->_key = $key;
     if ($secret) $this->_secret = $secret;
-    $this->_baseUri = $testnet 
-      ? 'https://test.bitme.com/rest/' 
-      : 'https://bitme.com/rest/';
+    $this->_baseUri = 'https://bitme.com/rest/';
     $this->_nonce = time();
   }
   
@@ -63,12 +61,6 @@ class Rest
   {
     $data = array('nonce' => $this->_nonce++);
     return $this->_doRequest('get', 'accounts', $data);
-  }
-  
-  public function accountLimits()
-  {
-    $data = array('nonce' => $this->_nonce++);
-    return $this->_doRequest('get', 'account-limits', $data);
   }
   
   public function bitcoinAddress()
