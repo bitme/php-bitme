@@ -31,13 +31,3 @@ if (Rest::isError($response)) {
   print_r($response);
 }
 ```
-
-## Testing
-
-You may use the [testnet](https://test.bitme.com) API for development/testing 
-purposes.
-
-```php
-<?php
-$rest = new Rest('testnetkey', 'testnetsecret', true);
-```
