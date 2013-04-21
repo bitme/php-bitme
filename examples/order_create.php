@@ -1,6 +1,6 @@
 <?php
 require '../rest.php';
-use BitMe\Rest;
+use BitBox\Rest;
 
 define('KEY', 'mykey');
 define('SECRET', 'mysecret');

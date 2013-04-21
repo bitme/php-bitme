@@ -1,5 +1,5 @@
 <?php
-namespace BitMe;
+namespace BitBox;
 
 class Rest
 {
@@ -17,7 +17,7 @@ class Rest
   {
     if ($key) $this->_key = $key;
     if ($secret) $this->_secret = $secret;
-    $this->_baseUri = 'https://bitme.com/rest/';
+    $this->_baseUri = 'https://bitbox.mx/rest/';
     $this->_nonce = time();
   }
   

@@ -1,13 +1,13 @@
-# BitMe\Rest
+# BitBox\Rest
 
-Communicate with [BitMe REST API](http://bitme.github.com/rest/).
+Communicate with [BitBox REST API](http://inbitbox.github.io/rest/).
 
 ## Verify API Credentials
 
 ```php
 <?php
 require 'rest.php';
-use BitMe\Rest;
+use BitBox\Rest;
 
 $rest = new Rest('mykey', 'mysecret');
 $response = $rest->verifyCredentials();

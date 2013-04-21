@@ -1,6 +1,6 @@
 <?php
 require '../rest.php';
-use BitMe\Rest;
+use BitBox\Rest;
 
 // get current orderbook
 $rest = new Rest();
