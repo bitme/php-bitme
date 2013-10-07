@@ -1,6 +1,6 @@
 # BitMe\Rest
 
-Communicate with [BitMe REST API](http://bitme.github.com/rest/).
+Communicate with [BitMe REST API](http://bitme.github.io/rest/).
 
 ## Verify API Credentials
 
