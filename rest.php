@@ -103,45 +103,6 @@ class Rest
     return $this->_doRequest('get', 'order/' . $uuid, $data);
   }
   
-  public function couponCreate($currencyCd, $amount)
-  {
-    $data = array(
-      'nonce' => $this->_nonce++,
-      'currency_cd' => $currencyCd,
-      'amount' => $amount
-    );
-    return $this->_doRequest('post', 'coupon/create', $data);
-  }
-  
-  public function couponRedeem($code)
-  {
-    $data = array(
-      'nonce' => $this->_nonce++,
-      'code' => $code
-    );
-    return $this->_doRequest('post', 'coupon/redeem', $data);
-  }
-  
-  public function couponCancel($code)
-  {
-    $data = array(
-      'nonce' => $this->_nonce++,
-      'code' => $code
-    );
-    return $this->_doRequest('post', 'coupon/cancel', $data);
-  }
-  
-  public function transferUser($toUserUuid, $currencyCd, $amount)
-  {
-    $data = array(
-      'nonce' => $this->_nonce++,
-      'to_user_uuid' => $toUserUuid,
-      'currency_cd' => $currencyCd,
-      'amount' => $amount
-    );
-    return $this->_doRequest('post', 'transfer/user', $data);
-  }
-  
   protected function _doRequest($method, $call, $data = null)
   {
     $dataString = $data ? http_build_query($data) : null;
