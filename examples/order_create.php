@@ -5,11 +5,11 @@ use BitMe\Rest;
 define('KEY', 'mykey');
 define('SECRET', 'mysecret');
 
-// BUY 2 BTC @ 6 USD/each
-$currencyPair = 'BTCUSD';
+// BUY 2 BTC @ 75 LTC/each
+$currencyPair = 'BTCLTC';
 $orderTypeCd = 'BID';
 $quantity = 2;
-$rate = 6;
+$rate = 75;
 
 // create a new order
 $rest = new Rest(KEY, SECRET);

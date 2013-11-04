@@ -24,7 +24,7 @@ if (Rest::isError($response)) {
 <?php
 // orderbook does not require authentication
 $rest = new Rest();
-$response = $rest->orderbook('BTCUSD');
+$response = $rest->orderbook('BTCLTC');
 if (Rest::isError($response)) {
   echo $response->message . "\n";
 } else {
